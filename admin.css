@@ -1,0 +1,12 @@
+@font-face {
+    font-family: poppins;
+    src: url(/Applications/XAMPP/xamppfiles/htdocs/KAVACH/Poppins/Poppins-Regular.ttf);
+    src: url(/Applications/XAMPP/xamppfiles/htdocs/KAVACH/Poppins/Poppins-Medium.ttf);
+    src: url(/Applications/XAMPP/xamppfiles/htdocs/KAVACH/Poppins/Poppins-SemiBold.ttf);
+    src: url(/Applications/XAMPP/xamppfiles/htdocs/KAVACH/Poppins/Poppins-Bold.ttf);
+    src: url(/Applications/XAMPP/xamppfiles/htdocs/KAVACH/Poppins/Poppins-ExtraBold.ttf);
+}
+.form{
+    display:flex;
+    justify-content: center;
+}
