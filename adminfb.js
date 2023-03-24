@@ -39,10 +39,16 @@ const signIn = () => {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((result) => {
             // Signed in 
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    getUserData(user.uid);
+                }
+            })
             document.write("You are Signed In")
             var timestamp=new Date();
             console.log(timestamp)
             console.log(result)
+            window.location.href = "menu.html";
             
         })
         .catch((error) => {

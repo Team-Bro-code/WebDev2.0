@@ -31,20 +31,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-      <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
       <script>
-         const signout=()=>{
-    firebase.auth().signOut().then(function() {
-        console.log('Signed Out');
-        var timestamp=new Date();
-            console.log(timestamp)
-      }, function(error) {
-        console.error('Sign Out Error', error);
-        
-      });
-}
+
       </script>
    </head>
    <!-- body -->
@@ -68,16 +56,10 @@
                      <a href="update.html">Update profile</a>
                   </li>
                   <li>
-                     <a href="add.html">Add officer</a>
-                  </li>
-                  <li>
-                     <a href="#contact">Shower officers</a>
-                  </li>
-                  <li>
                     <a href="change.html">Change password</a>
                  </li>
                  <li>
-                    <a id="signout" onclick="signout()">Sign out</a>
+                    <a href="index.html">Sign out</a>
                  </li>
                </ul>
             </nav>
@@ -143,7 +125,7 @@
                   <div class="row">
                      <div class="col-md-12">
                         <div class="titlepage">
-                           <h2>Distance from <span class="blu">posting</span></h2>
+                           <h2>Distance from <span class="blu">Office</span></h2>
                            <br><br>
                            <div class="classified_box">
                               <div class="fornt">
@@ -337,7 +319,6 @@
              });
          });
       </script>
-      <script src="adminfb.js"></script>
    </body>
 </html>
 
