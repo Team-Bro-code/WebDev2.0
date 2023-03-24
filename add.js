@@ -56,6 +56,9 @@ const position = document.getElementById("position").value;
             }
             
             console.log(result)
+            confirm("Officer added");
+            window.location.href = "menu.html";
+
             // ...
         })
         .catch((error) => {

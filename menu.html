@@ -38,12 +38,52 @@
          const signout=()=>{
     firebase.auth().signOut().then(function() {
         console.log('Signed Out');
+        confirm("Signed out");
         var timestamp=new Date();
             console.log(timestamp)
       }, function(error) {
         console.error('Sign Out Error', error);
         
       });
+}
+      </script>
+      <script>
+         const firebaseApp = firebase.initializeApp({
+    apiKey: "AIzaSyBwpuppjRg5NUztbMh_20v3tuahzCI7NsA",
+  authDomain: "kavachapp-b6a22.firebaseapp.com",
+  projectId: "kavachapp-b6a22",
+  storageBucket: "kavachapp-b6a22.appspot.com",
+  messagingSenderId: "198498887763",
+  appId: "1:198498887763:web:22e717ac65891255933ea6",
+  measurementId: "G-46J4F77DTB"
+});
+
+const db = firebaseApp.firestore();
+const auth = firebaseApp.auth();
+const user = auth.currentUser;
+var deet;
+
+const getMarker=async ()=> {
+    const snapshot = await firebase.firestore().collection('employee').get()
+    deet = snapshot.docs.map(doc => doc.data());
+    console.log(deet);
+    for (let i = 0; i < deet.length; i++) {
+      document.write("<br>")
+      document.write(deet[i]['name']);
+      document.write(" ");
+      document.write(deet[i]['email']);
+      document.write(" ");
+      document.write(" ");
+      document.write(deet[i]['job']);
+      document.write(" ");
+      document.write(" ");
+      document.write(deet[i]['employee_id']);
+      document.write(" ");
+      document.write(" ");
+      document.write(deet[i]['role']);
+      document.write("<br>");
+
+    }
 }
       </script>
    </head>
@@ -71,13 +111,13 @@
                      <a href="add.html">Add officer</a>
                   </li>
                   <li>
-                     <a href="#contact">Shower officers</a>
+                     <a href=# onclick="getMarker()">Shower officers</a>
                   </li>
                   <li>
                     <a href="change.html">Change password</a>
                  </li>
                  <li>
-                    <a id="signout" onclick="signout()">Sign out</a>
+                    <a href="index.html" id="signout" onclick="signout()">Sign out</a>
                  </li>
                </ul>
             </nav>

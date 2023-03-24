@@ -44,7 +44,7 @@ const signIn = () => {
                     getUserData(user.uid);
                 }
             })
-            document.write("You are Signed In")
+            confirm("You are Signed In")
             var timestamp=new Date();
             console.log(timestamp)
             console.log(result)
