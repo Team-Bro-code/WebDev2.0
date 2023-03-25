@@ -19,6 +19,8 @@ const getMarker=async ()=> {
     deet = snapshot.docs.map(doc => doc.data());
     console.log(deet);
     for (let i = 0; i < deet.length; i++) {
+      var value=deet.get
+      console.log(deet.length);
       document.write("<br>")
       document.write(deet[i]['name']);
       document.write("<br>");

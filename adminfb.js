@@ -50,6 +50,7 @@ const signIn = () => {
             console.log(result)
             window.location.href = "menu.html";
             
+            
         })
         .catch((error) => {
             console.log(error.code);

@@ -67,6 +67,8 @@ const getMarker=async ()=> {
     const snapshot = await firebase.firestore().collection('employee').get()
     deet = snapshot.docs.map(doc => doc.data());
     console.log(deet);
+    console.log(deet.length);
+    var length=deet.length;
     for (let i = 0; i < deet.length; i++) {
       document.write("<br>")
       document.write(deet[i]['name']);
@@ -159,7 +161,7 @@ const getMarker=async ()=> {
                            <div class="col-md-126">
                               <div class="text-bg">
                                  <h1>Name</h1>
-                                 <span>A remotely usable tracker platform that provides location of police offers deployed at a bundobust to ensure tracebility and organization of the officials== </span>
+                                 <span>View,modify,track and recieve deployment alerts of police officers on duty along with officer details and profile updation.  </span>
                                  <a href=#>Checkin:</a>
                                  <a href=#>Checkout:</a>
                               </div>
